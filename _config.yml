@@ -1,0 +1,145 @@
+# Hexo Configuration
+## Docs: http://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: kilic の 投资学习笔记
+subtitle: 在学投资的小白
+description: 爱喝开水的无业咸鱼
+author: kilic
+email: mhw3389@hotmail.com
+keywords: "小白, 持续精进, 含蓄的人, 长期有耐心"
+timezone: Asia/Shanghai
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://kilicsama.github.io/
+root: /
+permalink: :year/:month/:day/:title/
+
+permalink_defaults:
+
+# Directory
+source_dir: source
+# 公共文件夹，存放生成站点文件
+public_dir: public
+tag_dir: tags
+# 归档文件夹
+archive_dir: archives
+# 分类文件件
+category_dir: categories
+# Include code 文件夹
+code_dir: downloads/code
+
+galleries: galleries
+
+# Writing
+# 新文章文件名
+new_post_name: :title.md
+# 预设布局
+default_layout: post
+#
+auto_spacing: true
+titlecase: true # Transform title into titlecase
+external_link: false # Open external links in new tab
+filename_case: 2
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Archives
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 1
+category: 1
+tag: 1
+
+# Server
+## Hexo uses Connect as a server
+## You can customize the logger format as defined in
+## http://www.senchalabs.org/connect/logger.html
+port: 4000
+server_ip: localhost
+logger: false
+logger_format: dev
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+# Set per_page to 0 to disable pagination
+# per_page: 12
+pagination_dir: page
+
+# Disqus
+disqus_shortname:
+
+# Extensions
+## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
+## Themes: https://github.com/hexojs/hexo/wiki/Themes
+# plugins:
+#  - hexo-generator-feed
+#  - hexo-generator-baidu-sitemap
+#  - hexo-generator-sitemap
+
+# theme: aero-dual
+theme: Hacker
+
+exclude_generator:
+
+deploy:
+  type: git
+  repo: git@github.com:kilicsama/kilicsama.github.io.git
+  #repo: git@39.96.88.156:/var/repo/blog.git
+  branch: master
+
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xm
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 100
+
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
+
+index_generator:
+  path: ""
+  per_page: 9
+  order_by: -date
+
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  hljs: true
+  tab_replace: "  "
+
